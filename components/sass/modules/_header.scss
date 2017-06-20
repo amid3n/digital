@@ -1,0 +1,130 @@
+.header {
+  color: $fstFontColor;
+  background: url(../images/hero/hero_bg.jpg) no-repeat center center;
+  @include background-size(cover);
+}
+
+// Header
+.menu {
+  list-style: none;
+  text-align: center;
+  padding: 1.5em 0 0;
+  margin: 0;
+
+  &__item {
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    margin-right: 3%;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: $menuPadding;
+    font-weight: 400;
+  }
+}
+
+
+
+// Logo
+.logo {
+  margin-top: 1.5em;
+  text-align: center;
+
+  &__text {
+    display: inline-block;
+    font-size: em(45px);
+    font-weight: 600;
+    letter-spacing: -0.07em;
+
+    &:after {
+      content: '';
+      @include border-radius(50%);
+      height: em(14px, 45px);
+      width: em(14px, 45px);
+      background-color: $decorFontColor;
+      margin-left: 5px;
+      display: inline-block;
+    }
+  }
+}
+
+// Media buttons
+.media-list {
+  list-style: none;
+  text-align: center;
+  font-size: em(20px);
+  padding: 0 0 0 .8em;
+  margin: .8em 0 0;
+
+  &__item {
+    display: inline-block;
+    margin-right: 1em;
+  }
+
+  &__link {
+    display: block;
+    width: 1.2em;
+    height: 1.2em;
+    padding: .4em;
+    text-align: center;
+    border: $mediaBorder;
+    @include border-radius(50%);
+    @include transition();
+
+    &:hover {
+      border-color: $btnColor;
+      @include single-box-shadow(1px, 1px, 3px, transparentize($btnColor, 1));
+    }
+  }
+}
+
+// Hero
+.hero {
+  padding: 0 10%;
+  margin-top: 3em;
+  text-align: center;
+
+  &__text {
+    margin-top: 3em;
+  }
+
+  &__button {
+    margin: 3em 0;
+  }
+}
+
+// Small screen
+
+@include break(0, $small) {
+  .menu {
+    padding-top: 0.5em;
+  }
+
+  .hero__title {
+    font-size: rem(45px);
+  }
+
+  .hero__text {
+    margin-top: 1.5em;
+  }
+
+  .hero__button {
+    margin-top: 1.3em;
+  }
+}
+
+@include break($sm-medium) {
+  .header__hero {
+    margin-top: 1.5em;
+  }
+
+  .hero__title {
+    font-size: rem(54px);
+  }
+}

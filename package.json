@@ -1,5 +1,5 @@
 {
-  "name": "waxcom",
+  "name": "waxom",
   "version": "0.0.0",
   "description": "Responsive project",
   "main": "index.js",
@@ -11,5 +11,17 @@
     "url": "\u0016https://github.com/amid3n/waxcom.git"
   },
   "author": "Dima Rosmait",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-json-minify": "^1.2.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8"
+  }
 }

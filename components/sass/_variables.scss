@@ -1,0 +1,39 @@
+@import "mixins";
+
+// Fonts
+@import "https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900i";
+
+
+// Colors
+$white: #ffffff;
+$black: #000000;
+$darkGray: #383738;
+$orange: #fc9e20;
+$extraGray: #2f2f2f;
+
+
+// Variables
+$fstFontColor: $white;
+$scdFontColor: $darkGray;
+$decorFontColor: $orange;
+$fstBGColor: $white;
+$scdBGColor: $extraGray;
+$btnColor: $orange;
+
+$fontFamily: Lato, Arial, Georgia, sans-serif;
+$mediaBorder: 2px solid $fstFontColor;
+
+$small: em(469px);
+$sm-medium: em(470px);
+$medium: em(768px);
+$large: em(1024px);
+
+
+// Transition default
+$default-transition-property: all;
+$default-transition-duration: .5s;
+$default-transition-function: ease-out;
+
+
+// Paddings
+$menuPadding: .5em .2em;

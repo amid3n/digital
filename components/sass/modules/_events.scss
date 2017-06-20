@@ -1,0 +1,12 @@
+.events {
+  padding: 0 10%;
+  max-width: 1600px;
+}
+
+// Small screen
+@include break(0, $small) {
+  .events {
+    padding: 0 5%;
+    text-align: justify;
+  }
+}

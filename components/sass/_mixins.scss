@@ -1,0 +1,25 @@
+// Functions
+@function em($value, $base: 16px) {
+  @return ($value / $base) * 1em;
+}
+
+@function rem($value, $base: 16px) {
+  @return ($value / $base) * 1rem;
+}
+
+@function col-width ($columns: 12, $page-width: 100%, $gap: 1%) {
+  @return ($page-width - $gap * ($columns - 1)) / $columns;
+}
+
+// Mixins
+@mixin break( $args... ) {
+  @if length($args) == 1 {
+    @media (min-width: nth($args, 1)) {
+      @content;
+    }
+  } @else {
+    @media (min-width: nth($args, 1)) and (max-width: nth($args, 2)) {
+      @content;
+    }
+  }
+}

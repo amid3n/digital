@@ -1,0 +1,58 @@
+html {
+  font-family: Lato, Arial, Georgia, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.3em;
+}
+
+#{headings()} {
+  text-transform: uppercase;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: em(82px);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: em(45px);
+  color: $scdFontColor;
+
+  .title_decor {
+    color: $decorFontColor;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 3.3em;
+    border-bottom: .14em solid $btnColor;
+    margin-top: .4em;
+  }
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffffff;
+
+  &:hover {
+    color: $decorFontColor;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+@include break(0, $small) {
+  html {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: em(38px);
+  }
+}
