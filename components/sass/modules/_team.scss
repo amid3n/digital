@@ -1,22 +1,7 @@
 .team {
-    padding: 0 10% 3em;
-    max-width: 1600px;
     background-color: $scdBGColor;
-    background: linear-gradient(to bottom right,$scdBGColor, lighten($scdBGColor, 10%) 60%, $scdBGColor);
+    @include gradientBlock($bgColor: $scdBGColor, $fontColor: $fstFontColor);
     overflow: hidden;
-
-    &__title {
-        color:  $fstFontColor;
-    }
-
-    &__text {
-        color: transparentize($fstFontColor, .25);
-        padding: 0;
-
-        strong {
-            color: $fstFontColor;
-        }
-    }
 }
 
 .employ {
@@ -42,30 +27,56 @@
     }
 
     &__name {
-        font-size: em(24px);
+        font-size: 1.35em;
         line-height: 1.2em;
+        margin-top: .5rem;
         font-weight: 900;
         text-transform: uppercase;
-        letter-spacing: .01em;
+        letter-spacing: .03em;
         color: $decorFontColor;
     }
 
     &__position {
         color: transparentize($fstFontColor, .4);
+        line-height: 1.2em;
     }
 }
 
 // Small screen
-@include break(0, $small) {
+@include break(0, $sm-medium) {
     .team {
-        padding: 0 5%;
+        text-align: center;
+
+        &__button {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .employ {
+        font-size: .8em;
+
+        &:last-of-type {
+            padding-bottom: 1.2em;
+        }
     }
 }
 
-@include break($medium) {
+@include break($sm-medium, $medium) {
+    .employ {
+        &:last-of-type {
+            padding-bottom: 2rem;
+        }
+    }
+
     .team {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        &__button {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@include break($large) {
+    .team {
         font-size: 0;
 
         &__description {
@@ -73,11 +84,6 @@
             width: col-width($gap: 0) * 5;
             display: inline-block;
             vertical-align: middle;
-        }
-
-        &__title {
-            margin: 0;
-            padding: 0;
         }
     }
 

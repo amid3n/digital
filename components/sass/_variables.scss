@@ -23,10 +23,15 @@ $btnColor: $orange;
 $fontFamily: Lato, Arial, Georgia, sans-serif;
 $mediaBorder: 2px solid $fstFontColor;
 
-$small: em(469px);
-$sm-medium: em(470px);
-$medium: em(768px);
+$small: em(570px);
+$sm-medium: em(571px);
+$medium: em(760px);
+$lg-medium: em(761px);
+$sm-large: em(1023px);
 $large: em(1024px);
+
+// Icons
+$advantagesListIcons: flag, moniton, operator;
 
 
 // Transition default

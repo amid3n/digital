@@ -1,12 +1,18 @@
 .events {
-  padding: 0 10%;
-  max-width: 1600px;
+  background-color: $fstBGColor;
 }
 
 // Small screen
 @include break(0, $small) {
   .events {
-    padding: 0 5%;
-    text-align: justify;
+    text-align: center;
+  }
+}
+
+@include break($sm-medium, $medium) {
+  .events {
+    &__button {
+      margin-bottom: 0;
+    }
   }
 }

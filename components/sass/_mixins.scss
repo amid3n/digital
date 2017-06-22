@@ -23,3 +23,19 @@
     }
   }
 }
+
+@mixin gradientBlock($bgColor: black, $fontColor: white) {
+  @include background-image(linear_gradient(to bottom right, $bgColor,  lighten($bgColor, 10%) 60%, $bgColor));
+
+  &__title {
+    color:  $fontColor;
+  }
+
+  &__text {
+    color: transparentize($fontColor, .25);
+
+    strong {
+      color: $fontColor;
+    }
+  }
+}

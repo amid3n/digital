@@ -8,7 +8,7 @@
 .menu {
   list-style: none;
   text-align: center;
-  padding: 1.5em 0 0;
+  padding-top: 1.5em;
   margin: 0;
 
   &__item {
@@ -106,25 +106,41 @@
     padding-top: 0.5em;
   }
 
-  .hero__title {
-    font-size: rem(45px);
-  }
-
-  .hero__text {
-    margin-top: 1.5em;
-  }
-
-  .hero__button {
+  .hero {
     margin-top: 1.3em;
+
+    &__title {
+      font-size: rem(45px);
+    }
+
+    &__text {
+      margin-top: 1.2em;
+    }
+
+    &__button {
+      margin-top: 1.2em;
+    }
   }
 }
 
-@include break($sm-medium) {
-  .header__hero {
-    margin-top: 1.5em;
+@include break($sm-medium, $medium) {
+  .menu {
+    padding-top: .5em;
   }
 
-  .hero__title {
-    font-size: rem(54px);
+  .hero {
+    margin-top: 1.3em;
+
+    &__title {
+      font-size: rem(54px);
+    }
+
+    &__text {
+      margin-top: 1.2em;
+    }
+
+    &__button {
+      margin-top: 1.3em;
+    }
   }
 }

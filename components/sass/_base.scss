@@ -17,20 +17,7 @@ h1 {
 }
 
 h2 {
-  font-size: em(45px);
-  color: $scdFontColor;
 
-  .title_decor {
-    color: $decorFontColor;
-  }
-
-  &:after {
-    content: '';
-    display: block;
-    width: 3.3em;
-    border-bottom: .14em solid $btnColor;
-    margin-top: .4em;
-  }
 }
 
 a {

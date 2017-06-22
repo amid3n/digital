@@ -1,0 +1,84 @@
+.advantages {
+  @include gradientBlock($bgColor: $scdBGColor, $fontColor: $fstFontColor);
+
+  &__bg-img {
+    background: url(../images/advantages/advantages_bg.jpg) no-repeat right center;
+    width: col-width($gap: 0%) * 7;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -10%;
+    height: 600px;
+  }
+
+  &__description {
+    width: col-width($gap: 0%) * 5;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5%;
+  }
+
+  &__list {
+    color: $fstFontColor;
+  }
+
+  &-list__item {
+    position: relative;
+    @include clearfix;
+    padding-left: 7.5em;
+    margin-top: 2.5em;
+
+    &:before {
+      color: $decorFontColor;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 6em;
+    }
+  }
+
+  &-list__title {
+    padding-bottom: .5em;
+  }
+
+  &-list__text {
+    line-height: 1.3;
+    color: transparentize($fstFontColor, .25);
+  }
+}
+
+@include break(0, $small) {
+  .advantages {
+    &__bg-img {
+      display: none;
+    }
+
+    &__description {
+      width: 100%;
+      margin: 0;
+    }
+
+    &-list__item {
+      @include clearfix;
+      padding-left: 5em;
+      margin-top: 2.5em;
+      text-align: justify;
+
+      &:before {
+        font-size: 4em;
+      }
+    }
+  }
+}
+
+@include break($sm-medium, $medium) {
+  .advantages {
+    &__bg-img {
+      display: none;
+    }
+
+    &__description {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

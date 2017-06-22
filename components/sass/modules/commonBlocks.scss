@@ -1,3 +1,9 @@
+.wrapper {
+  padding: 3rem 7%;
+  max-width: 1600px;
+  margin: auto;
+}
+
 .button {
   display: inline-block;
   background-color: $btnColor;
@@ -16,26 +22,77 @@
 
 .description {
   &__title {
+    font-size: em(45px);
+    color: $scdFontColor;
+
+    .title_decor {
+      color: $decorFontColor;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 3.3em;
+      border-bottom: .14em solid $btnColor;
+      margin-top: .4em;
+    }
+  }
+
+  &__text {
     padding-top: 1.5em;
   }
 }
 
 // Small screen
 @include break(0, $small) {
+  .wrapper {
+    padding: 1.5rem 5%;
+  }
+
   .description {
     &__title {
-      margin-top: 1em;
+      font-size: em(36px, 18px);
       padding-left: 5%;
       text-align: left;
     }
 
     &__text {
-      margin-top: 2em;
       text-align: justify;
     }
   }
 
   .button {
-    margin: 2em 0;
+    margin: 2em 0 0;
+  }
+}
+
+@include break($sm-medium, $medium) {
+  .button {
+    margin-bottom: 0;
+  }
+}
+
+@include break($large) {
+  .description {
+    &__title {
+      font-size: em(45px);
+      color: $scdFontColor;
+
+      .title_decor {
+        color: $decorFontColor;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 3.3em;
+        border-bottom: .14em solid $btnColor;
+        margin-top: .4em;
+      }
+    }
+
+    &__text {
+      padding-top: 1.5em;
+    }
   }
 }
