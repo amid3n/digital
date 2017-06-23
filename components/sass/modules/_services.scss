@@ -1,0 +1,207 @@
+.services {
+  background-color: $fstBGColor;
+  @include clearfix;
+  overflow: hidden;
+
+  &__inner {
+    padding: 0;
+  }
+
+  &__description {
+    width: col-width($gap: 0%) * 4.5;
+    display: inline-block;
+    float: left;
+    margin-right: col-width($gap: 0%) * .5;
+    @include box-sizing(border-box);
+    padding: 3rem 4% 3rem 12%;
+    text-align: right;
+  }
+
+  &__title {
+    @include clearfix;
+    &:after {
+      float: right;
+    }
+  }
+
+  &__block {
+    width: col-width($gap: 0) * 7;
+    padding: 5rem 0;
+    float: left;
+    background: $scdBGColor url('../images/services/services_bg.jpg') no-repeat center bottom;
+    @include background-size(cover);
+
+    &:before {
+      content: '';
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &__examples {
+    @include background-image(linear_gradient(to bottom right, $scdBGColor,  lighten($scdBGColor, 10%) 60%, $scdBGColor));
+    @include box-sizing(border-box);
+    width: 100%;
+    position: relative;
+    margin-left: -7%;
+    padding: 1.5em 3em;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.service {
+  width: 50%;
+  float: left;
+  text-align: center;
+  @include box-sizing(border-box);
+  padding: 2rem;
+
+  &__icon {
+    padding-bottom: 1em;
+    
+    &:before {
+      display: inline-block;
+      border: 2px solid $fstFontColor;
+      @include border-radius(50%);
+      font-size: 3.5em;
+      padding: .4em;
+      color: $fstFontColor;
+    }
+  }
+
+  &__name {
+    color:  $decorFontColor;
+    padding-bottom: .5em;
+  }
+
+  &__text {
+    color: transparentize($fstFontColor, .25);
+  }
+}
+
+@include break(0, $small) {
+  .services {
+    &__description {
+      float: none;
+      width: 100%;
+      padding: 1.5rem 5%;
+      text-align: center;
+    }
+
+    &__title {
+      &:after {
+        float: none;
+      }
+    }
+
+    &__block {
+      float: none;
+      width: 100%;
+      padding: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &__examples {
+      margin: 0;
+      padding: 1.5rem 5%;
+    }
+  }
+
+  .service {
+    float: none;
+    width: 100%;
+    padding: 0;
+    padding-top: 1em;
+
+    &__icon {
+      padding-bottom: .3em;
+
+      &:before {
+        font-size: 2.5em;
+      }
+    }
+  }
+}
+
+@include break($sm-medium, $medium) {
+  .services {
+    &__description {
+      float: none;
+      width: 100%;
+      padding: 1.5rem 5%;
+      text-align: left;
+    }
+
+    &__title {
+      &:after {
+        float: none;
+      }
+    }
+
+    &__block {
+      float: none;
+      width: 100%;
+      padding: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &__examples {
+      margin: 0;
+      padding: 1.5rem 5%;
+    }
+  }
+
+  .service {
+    float: none;
+    width: 100%;
+    padding: 0;
+    padding-top: 1em;
+    text-align: left;
+    @include clearfix;
+
+    &__icon {
+      padding-bottom: .3em;
+
+      &:before {
+        font-size: 2.5em;
+        float: left;
+        margin: 0 .5em .5em 0;
+      }
+    }
+  }
+}
+
+@include break($lg-medium, $large) {
+  .services {
+    &__description {
+      padding: 3rem 2% 3rem 5%;
+    }
+  }
+
+  .service {
+    float: none;
+    width: 100%;
+    padding: 0;
+    padding-top: 1em;
+    text-align: left;
+    @include clearfix;
+
+    &__icon {
+      padding: .8em 0;
+      float: left;
+
+      &:before {
+        font-size: 2.5em;
+        margin: 0 .5em .5em 0;
+      }
+    }
+  }
+}

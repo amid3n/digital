@@ -602,3 +602,194 @@ strong {
     margin: 0;
   }
 }
+.services {
+  background-color: #ffffff;
+  overflow: hidden;
+  *zoom: 1;
+  overflow: hidden;
+}
+.services__inner {
+  padding: 0;
+}
+.services__description {
+  width: 37.5%;
+  display: inline-block;
+  float: left;
+  margin-right: 4.16667%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 3rem 4% 3rem 12%;
+  text-align: right;
+}
+.services__title {
+  overflow: hidden;
+  *zoom: 1;
+}
+.services__title:after {
+  float: right;
+}
+.services__block {
+  width: 58.33333%;
+  padding: 5rem 0;
+  float: left;
+  background: #2f2f2f url("../images/services/services_bg.jpg") no-repeat center bottom;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.services__block:before {
+  content: '';
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.services__examples {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuMCIgeDI9IjEuMCIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJmMmYyZiIvPjxzdG9wIG9mZnNldD0iNjAlIiBzdG9wLWNvbG9yPSIjNDk0OTQ5Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMmYyZjJmIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0%, #2f2f2f), color-stop(60%, #494949), color-stop(100%, #2f2f2f));
+  background-image: -moz-linear-gradient(top, #2f2f2f, #494949 60%, #2f2f2f);
+  background-image: -webkit-linear-gradient(top, #2f2f2f, #494949 60%, #2f2f2f);
+  background-image: linear-gradient(to bottom right, #2f2f2f, #494949 60%, #2f2f2f);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  margin-left: -7%;
+  padding: 1.5em 3em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.service {
+  width: 50%;
+  float: left;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+.service__icon {
+  padding-bottom: 1em;
+}
+.service__icon:before {
+  display: inline-block;
+  border: 2px solid #ffffff;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  font-size: 3.5em;
+  padding: .4em;
+  color: #ffffff;
+}
+.service__name {
+  color: #fc9e20;
+  padding-bottom: .5em;
+}
+.service__text {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+@media (min-width: 0) and (max-width: 35.625em) {
+  .services__description {
+    float: none;
+    width: 100%;
+    padding: 1.5rem 5%;
+    text-align: center;
+  }
+  .services__title:after {
+    float: none;
+  }
+  .services__block {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+  .services__block:before {
+    display: none;
+  }
+  .services__examples {
+    margin: 0;
+    padding: 1.5rem 5%;
+  }
+
+  .service {
+    float: none;
+    width: 100%;
+    padding: 0;
+    padding-top: 1em;
+  }
+  .service__icon {
+    padding-bottom: .3em;
+  }
+  .service__icon:before {
+    font-size: 2.5em;
+  }
+}
+@media (min-width: 35.6875em) and (max-width: 47.5em) {
+  .services__description {
+    float: none;
+    width: 100%;
+    padding: 1.5rem 5%;
+    text-align: left;
+  }
+  .services__title:after {
+    float: none;
+  }
+  .services__block {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+  .services__block:before {
+    display: none;
+  }
+  .services__examples {
+    margin: 0;
+    padding: 1.5rem 5%;
+  }
+
+  .service {
+    float: none;
+    width: 100%;
+    padding: 0;
+    padding-top: 1em;
+    text-align: left;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  .service__icon {
+    padding-bottom: .3em;
+  }
+  .service__icon:before {
+    font-size: 2.5em;
+    float: left;
+    margin: 0 .5em .5em 0;
+  }
+}
+@media (min-width: 47.5625em) and (max-width: 64em) {
+  .services__description {
+    padding: 3rem 2% 3rem 5%;
+  }
+
+  .service {
+    float: none;
+    width: 100%;
+    padding: 0;
+    padding-top: 1em;
+    text-align: left;
+    overflow: hidden;
+    *zoom: 1;
+  }
+  .service__icon {
+    padding: .8em 0;
+    float: left;
+  }
+  .service__icon:before {
+    font-size: 2.5em;
+    margin: 0 .5em .5em 0;
+  }
+}
