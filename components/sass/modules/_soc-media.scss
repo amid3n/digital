@@ -1,0 +1,59 @@
+.soc-media {
+  background: $scdBGColor url('../images/soc-media/soc-media_bg.jpg') no-repeat center 60%;
+  @include background-size(cover);
+
+  &__inner {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  &__description {
+    text-align: center;
+  }
+
+  &__title {
+    color: $fstFontColor;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.social-list {
+  @include mediaButtons($fontSize: 30px, $color: $fstFontColor, $hoverColor: $decorFontColor);
+}
+
+@include break(0, $medium) {
+  .soc-media {
+
+    &__inner {
+      padding: 3rem 0;
+    }
+
+    &__description {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      text-align: center;
+    }
+  }
+}
+
+@include break($lg-medium, $large) {
+  .soc-media {
+    background-position-y: center;
+
+    &__inner {
+      padding: 4.5rem;
+    }
+  }
+
+  .social-list {
+    &__item {
+      margin-right: .5em;
+    }
+  }
+}

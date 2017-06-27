@@ -26,9 +26,9 @@
         <div class="logo">
             <div class="logo__text">digital</div>
             <ul class="media-list">
-                <li class="media-list__item"><a class="media-list__link" href="#">f</a></li>
-                <li class="media-list__item"><a class="media-list__link" href="#">G+</a></li>
-                <li class="media-list__item"><a class="media-list__link" href="#">YT</a></li>
+                <li class="media-list__item"><a class="media-list__link icon-soc-facebook" href="#"></a></li>
+                <li class="media-list__item"><a class="media-list__link icon-soc-google-plus" href="#"></a></li>
+                <li class="media-list__item"><a class="media-list__link icon-soc-youtube" href="#"></a></li>
             </ul>
         </div>
 
@@ -229,78 +229,87 @@
 </section>
 
 <section class="opinions">
-    <div class="description opinions__description">
-        <h2 class="description__title">
-            <span class="title_decor">Our</span><br>
-            Client say
-        </h2>
-        <ul class="list opinions__list">
-            <li class="item opinions__item">
-                <blockquote class="opinions__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-                </blockquote>
-                <p class="opinions__author">John Doe, CEO</p>
-            </li>
-            <li class="item opinions__item">
-                <blockquote class="opinions__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
-                </blockquote>
-                <p class="opinions__author">John Doe, CEO</p>
-            </li>
-        </ul>
-    </div>
-    <div class="opinions__bg-img"></div>
-    <div class="carousel opinions__carousel">
-        <ul class="list carousel__list">
-            <li class="carousel-item list__carousel-item">
-                <blockquote class="carousel-item__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut
-                </blockquote>
-                <p class="carousel-item__author">John Doe, CEO</p>
-            </li>
-            <li class="carousel-item list__carousel-item">
-                <blockquote class="carousel-item__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut
-                </blockquote>
-                <p class="carousel-item__author">John Doe, CEO</p>
-            </li>
-            <li class="carousel-item list__carousel-item">
-                <blockquote class="carousel-item__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut
-                </blockquote>
-                <p class="carousel-item__author">John Doe, CEO</p>
-            </li>
-        </ul>
-        <ul class="carousel__markers">
-            <li class="carousel__marker-1"></li>
-            <li class="carousel__marker-2"></li>
-            <li class="carousel__marker-3"></li>
-        </ul>
+    <div class="opinions__inner wrapper">
+        <div class="description opinions__description">
+            <h2 class="description__title opinions__title">
+                <span class="title_decor">Our</span><br>
+                Client say
+            </h2>
+            <ul class="list opinions__list">
+                <li class="item opinions__item icon-quote">
+                    <blockquote class="opinions__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                    </blockquote>
+                    <cite class="opinions__author">John Doe, CEO</cite>
+                </li>
+                <li class="item opinions__item icon-quote">
+                    <blockquote class="opinions__text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                    </blockquote>
+                    <cite class="opinions__author">John Doe, CEO</cite>
+                </li>
+            </ul>
+        </div>
+        <div class="opinions__bg-img"></div>
+        <div class="carousel opinions__carousel">
+            <div class="carousel-wrapper">
+            <ul class="list carousel__list icon-quote">
+                <li class="carousel-item list__carousel-item">
+                    <blockquote class="carousel-item__text">
+                        <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</strong><br>
+                        Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut
+                    </blockquote>
+                    <cite class="carousel-item__author">John Doe, CEO</cite>
+                </li>
+                <li class="carousel-item list__carousel-item">
+                    <blockquote class="carousel-item__text">
+                        <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</strong><br>
+                        Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut
+                    </blockquote>
+                    <cite class="carousel-item__author">John Doe, CEO</cite>
+                </li>
+                <li class="carousel-item list__carousel-item">
+                    <blockquote class="carousel-item__text">
+                        <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</strong><br>
+                        Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut
+                    </blockquote>
+                    <cite class="carousel-item__author">John Doe, CEO</cite>
+                </li>
+            </ul>
+            </div>
+            <ul class="carousel__markers">
+                <li class="carousel__marker" data-count="1"></li>
+                <li class="carousel__marker" data-count="1"></li>
+                <li class="carousel__marker" data-count="1"></li>
+            </ul>
+        </div>
     </div>
 </section>
 
 <section class="soc-media">
-    <div class="description soc-media__description">
-        <h2 class="description__title">
-            <span class="title_decor">Get</span><br>
-            in Touch</h2>
-        <ul class="media-list description__media-list">
-            <li class="media-list__item"></li>
-            <li class="media-list__item"></li>
-            <li class="media-list__item"></li>
-            <li class="media-list__item"></li>
-            <li class="media-list__item"></li>
-            <li class="media-list__item"></li>
-            <li class="media-list__item"></li>
-        </ul>
+    <div class="soc-media__inner wrapper">
+        <div class="description soc-media__description">
+            <h2 class="description__title soc-media__title">
+                <span class="title_decor">Get</span>
+                in Touch</h2>
+            <ul class="social-list description__social-list">
+                <li class="social-list__item"><a href="#" class="social-list__link icon-soc-facebook"></a></li>
+                <li class="social-list__item"><a href="#" class="social-list__link icon-soc-google-plus"></a></li>
+                <li class="social-list__item"><a href="#" class="social-list__link icon-soc-twitter"></a></li>
+                <li class="social-list__item"><a href="#" class="social-list__link icon-soc-vk"></a></li>
+                <li class="social-list__item"><a href="#" class="social-list__link icon-soc-telegram"></a></li>
+                <li class="social-list__item"><a href="#" class="social-list__link icon-soc-linkedin"></a></li>
+                <li class="social-list__item"><a href="#" class="social-list__link icon-soc-xing"></a></li>
+            </ul>
+        </div>
     </div>
 </section>
 

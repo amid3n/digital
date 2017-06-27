@@ -39,3 +39,29 @@
     }
   }
 }
+
+@mixin mediaButtons($fontSize: 20px, $color: white, $hoverColor: black) {
+  list-style: none;
+  text-align: center;
+  font-size: em($fontSize);
+  //padding: 0 0 0 .8em;
+  margin: .8em 0 0;
+
+  &__item {
+    display: inline-block;
+    margin-right: 1em;
+  }
+
+  &__link {
+    display: block;
+    padding: .5em;
+    border: 2px solid $color;
+    @include border-radius(50%);
+    @include transition();
+
+    &:hover {
+      border-color: $hoverColor;
+      @include single-box-shadow(1px, 1px, 3px, transparentize($hoverColor, .5));
+    }
+  }
+}

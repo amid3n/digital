@@ -56,32 +56,7 @@
 
 // Media buttons
 .media-list {
-  list-style: none;
-  text-align: center;
-  font-size: em(20px);
-  padding: 0 0 0 .8em;
-  margin: .8em 0 0;
-
-  &__item {
-    display: inline-block;
-    margin-right: 1em;
-  }
-
-  &__link {
-    display: block;
-    width: 1.2em;
-    height: 1.2em;
-    padding: .4em;
-    text-align: center;
-    border: $mediaBorder;
-    @include border-radius(50%);
-    @include transition();
-
-    &:hover {
-      border-color: $btnColor;
-      @include single-box-shadow(1px, 1px, 3px, transparentize($btnColor, 1));
-    }
-  }
+  @include mediaButtons($fontSize: 26px, $color: $fstFontColor, $hoverColor: $decorFontColor);
 }
 
 // Hero

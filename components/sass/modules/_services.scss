@@ -5,15 +5,16 @@
 
   &__inner {
     padding: 0;
+    display: table;
+    border-collapse: collapse;
   }
 
   &__description {
-    width: col-width($gap: 0%) * 4.5;
-    display: inline-block;
-    float: left;
-    margin-right: col-width($gap: 0%) * .5;
+    display: table-cell;
+    vertical-align: top;
+    width: col-width($gap: 0%) * 5;
     @include box-sizing(border-box);
-    padding: 3rem 4% 3rem 12%;
+    padding: 3rem 7% 3rem 14%;
     text-align: right;
   }
 
@@ -24,10 +25,16 @@
     }
   }
 
+  &__button {
+    margin-bottom: 0;
+  }
+
   &__block {
+    display: table-cell;
+    vertical-align: top;
     width: col-width($gap: 0) * 7;
+    height: 100%;
     padding: 5rem 0;
-    float: left;
     background: $scdBGColor url('../images/services/services_bg.jpg') no-repeat center bottom;
     @include background-size(cover);
 
@@ -83,8 +90,12 @@
 
 @include break(0, $small) {
   .services {
+    &__inner {
+      display: block;
+    }
+
     &__description {
-      float: none;
+      display: block;
       width: 100%;
       padding: 1.5rem 5%;
       text-align: center;
@@ -97,7 +108,7 @@
     }
 
     &__block {
-      float: none;
+      display: block;
       width: 100%;
       padding: 0;
 
@@ -131,7 +142,7 @@
 @include break($sm-medium, $medium) {
   .services {
     &__description {
-      float: none;
+      display: block;
       width: 100%;
       padding: 1.5rem 5%;
       text-align: left;
@@ -144,7 +155,7 @@
     }
 
     &__block {
-      float: none;
+      display: block;
       width: 100%;
       padding: 0;
 
@@ -182,7 +193,7 @@
 @include break($lg-medium, $large) {
   .services {
     &__description {
-      padding: 3rem 2% 3rem 5%;
+      padding: 3rem 6% 3rem 3%;
     }
   }
 
