@@ -190,7 +190,14 @@ strong {
   background-size: cover;
 }
 
+.nav {
+  display: table;
+  width: 100%;
+}
+
 .menu {
+  display: table-cell;
+  width: 30%;
   list-style: none;
   text-align: center;
   padding-top: 1.5em;
@@ -198,9 +205,10 @@ strong {
 }
 .menu__item {
   display: inline-block;
+  font-size: .85em;
   text-align: center;
   text-transform: uppercase;
-  margin-right: 3%;
+  margin-right: 7%;
 }
 .menu__item:last-of-type {
   margin-right: 0;
@@ -212,6 +220,8 @@ strong {
 }
 
 .logo {
+  display: table-cell;
+  width: 40%;
   margin-top: 1.5em;
   text-align: center;
 }
@@ -232,16 +242,28 @@ strong {
   margin-left: 5px;
   display: inline-block;
 }
+.logo:before {
+  font-size: 32em;
+  position: absolute;
+  top: -.51em;
+  left: calc(50% - 0.5em);
+  color: #fc9e20;
+}
 
 .media-list {
   list-style: none;
   text-align: center;
   font-size: 1.625em;
   margin: .8em 0 0;
+  position: relative;
+  z-index: 10;
 }
 .media-list__item {
   display: inline-block;
   margin-right: 1em;
+}
+.media-list__item:last-of-type {
+  margin-right: 0;
 }
 .media-list__link {
   display: block;
@@ -264,19 +286,32 @@ strong {
 
 .hero {
   padding: 0 10%;
-  margin-top: 3em;
+  margin-top: 10em;
   text-align: center;
 }
+.hero__title {
+  width: 80%;
+  margin: 0 auto;
+}
 .hero__text {
-  margin-top: 3em;
+  width: 60%;
+  margin: 2.5em auto 0;
 }
 .hero__button {
-  margin: 3em 0;
+  margin: 2.5em 0;
 }
 
 @media (min-width: 0) and (max-width: 35.5625em) {
   .menu {
     padding-top: 0.5em;
+    width: auto;
+  }
+
+  .logo {
+    display: block;
+    width: auto;
+    position: absolute;
+    top: 5em;
   }
 
   .hero {
@@ -312,6 +347,17 @@ strong {
 }
 .events {
   background-color: #ffffff;
+}
+.events__inner {
+  background: #ffffff url("../images/events/events_bg.png") no-repeat 110% center;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  position: relative;
+}
+.events__description {
+  width: 30%;
 }
 
 @media (min-width: 0) and (max-width: 35.5625em) {
@@ -1059,6 +1105,9 @@ strong {
 .social-list__item {
   display: inline-block;
   margin-right: 1em;
+}
+.social-list__item:last-of-type {
+  margin-right: 0;
 }
 .social-list__link {
   display: block;

@@ -108,3 +108,7 @@
     content: "\e914";
     font-family: 'icomoon' !important;
 }
+.icon-cube:before {
+    content: "\e915";
+    font-family: 'icomoon' !important;
+}
