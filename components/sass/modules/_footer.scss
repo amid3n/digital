@@ -1,0 +1,146 @@
+.footer {
+  @include background-image(linear_gradient(to bottom right, $scdBGColor,  lighten($scdBGColor, 10%) 60%, $scdBGColor));
+  padding-top: 5em;
+
+  &__contact {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    color: $fstFontColor;
+  }
+}
+
+.item__inner {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.contact {
+  font-size: 0;
+  text-align: center;
+
+  &__item {
+    display: inline-block;
+    width: col-width($columns: 3, $gap: 0);
+    font-size: 1rem;
+    vertical-align: top;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 3.5em;
+      margin-right: .5em;
+      color: $decorFontColor;
+    }
+  }
+
+  &__title {
+    font-size: 1.2em;
+    letter-spacing: .1em;
+    padding-bottom: .5em;
+  }
+
+  &__link {
+    line-height: 1.5;
+  }
+
+  &__text {
+    line-height: 1.5;
+  }
+}
+
+.copyright {
+  padding-top: 16em;
+  color: $fstFontColor;
+  text-align: center;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    border: 16em solid;
+    border-color: transparent transparent $decorFontColor transparent;
+
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 16em);
+    z-index: 1;
+  }
+
+  &:before {
+    content: '';
+    display: inline-block;
+    border: 14.5em solid;
+    border-color: transparent transparent $scdBGColor transparent;
+
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 14.5em);
+    z-index: 2;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1000;
+    bottom: 2em;
+    line-height: 1.5;
+  }
+}
+
+@include break(0, $medium) {
+  .footer {
+    padding: 0;
+  }
+
+  .contact {
+    padding: 1.5rem 5% 0;
+    &__item {
+      display: block;
+      width: 100%;
+      text-align: left;
+      margin-top: 2em;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      &:before {
+        float: left;
+        margin-top: .15em;
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 2em;
+    padding: 1em;
+    color: $fstFontColor;
+    text-align: center;
+    position: relative;
+    background-color: $scdBGColor;
+
+    &:after {
+      display: none;
+    }
+
+    &:before {
+      display: none;
+    }
+
+    &__text {
+      position: static;
+    }
+  }
+}
+
+@include break($sm-medium, $large) {
+  .contact__item:before {
+    font-size: 3em;
+    margin-right: .2em;
+  }
+}
