@@ -1,17 +1,5 @@
 .events {
   background-color: $fstBGColor;
-
-  &__inner {
-    background: $fstBGColor url('../images/events/events_bg.png') no-repeat 110% center;
-    @include background-size(contain);
-    position: relative;
-
-    
-  }
-
-  &__description {
-    width: 30%;
-  }
 }
 
 // Small screen
@@ -25,6 +13,33 @@
   .events {
     &__button {
       margin-bottom: 0;
+    }
+  }
+}
+
+@include break($lg-medium, $large) {
+  .events {
+    &__inner {
+      background: linear-gradient(left, white 0%, rgba(255,255,255,.9) 50%, transparent 100%), url('../images/events/events_bg.png') no-repeat right center;
+      @include background-size(cover);
+    }
+
+    &__description {
+      width: 40%;
+    }
+  }
+}
+
+@include break(1200px) {
+  .events {
+    &__inner {
+      background: linear-gradient(left, white 0%, transparent 100%), url('../images/events/events_bg.png') no-repeat right center;
+      @include background-size(contain);
+      position: relative;
+    }
+
+    &__description {
+      width: 30%;
     }
   }
 }

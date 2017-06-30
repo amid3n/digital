@@ -1,12 +1,11 @@
 .services {
-  background-color: $fstBGColor;
   @include clearfix;
   overflow: hidden;
+  @include background-image(linear_gradient(to right, $fstBGColor 0%, $fstBGColor 50%, $scdBGColor 50%,  lighten($scdBGColor, 10%) 80%, $scdBGColor 100%));
 
   &__inner {
     padding: 0;
     display: table;
-    border-collapse: collapse;
   }
 
   &__description {
@@ -35,7 +34,7 @@
     width: col-width($gap: 0) * 7;
     height: 100%;
     padding: 5rem 0;
-    background: $scdBGColor url('../images/services/services_bg.jpg') no-repeat center bottom;
+    background: url('../images/services/services_bg.jpg') no-repeat center bottom;
     @include background-size(cover);
 
     &:before {

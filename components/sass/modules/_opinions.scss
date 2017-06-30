@@ -8,7 +8,7 @@
     width: 50%;
     height: 100%;
     @include background-image(linear_gradient(to bottom right, $scdBGColor,  lighten($scdBGColor, 10%) 60%, $scdBGColor));
-    display: table-cell;
+    //display: table-cell;
     position: absolute;
     z-index: -1;
   }
@@ -119,9 +119,17 @@
     height: 1em;
     margin-top: 3.5em;
     margin-left: 0.5em;
-    background-color: $decorFontColor;
+    background-color: lighten($decorFontColor, 30%);
     @include border-radius(50%);
     cursor: pointer;
+    @include transition(background-color, .5s);
+
+    &:hover {
+      background-color: $decorFontColor;
+      -webkit-box-shadow: inset -1px 1px 3px darken($decorFontColor, 10%);
+      -moz-box-shadow: inset -1px 1px 3px darken($decorFontColor, 10%);
+      box-shadow: inset -1px 1px 3px darken($decorFontColor, 10%);
+    }
   }
 }
 
