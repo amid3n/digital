@@ -89,6 +89,8 @@
 
 @include break(0, $small) {
   .services {
+    background: $fstBGColor;
+
     &__inner {
       display: block;
     }
@@ -140,6 +142,8 @@
 
 @include break($sm-medium, $medium) {
   .services {
+    background: $fstBGColor;
+
     &__description {
       display: block;
       width: 100%;

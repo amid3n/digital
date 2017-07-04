@@ -5,51 +5,56 @@
 }
 
 .nav {
-  display: table;
   width: 100%;
 }
 
-// Header
-.menu {
-  display: none;
-  width: 30%;
-  list-style: none;
+// Menu
+.btn-block {
+  background-color: $scdBGColor;
+  padding: .7em;
   text-align: center;
-  padding-top: 1.5em;
-  margin: 0;
 
-  &__item {
-    display: inline-block;
-    font-size: .85em;
-    text-align: center;
-    text-transform: uppercase;
-    margin-right: 7%;
+  &__menu-btn {
+    margin: 0;
+    color: $fstFontColor;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: .3em .7em;
 
-    &:last-of-type {
-      margin-right: 0;
-    }
-  }
-
-  &__link {
-    display: block;
-    padding: $menuPadding;
-    font-weight: 400;
-    border-bottom: 1px solid transparent;
-    @include transition(all, .5s);
-
-    &:hover {
-      border-color: $decorFontColor;
+    &:focus {
+      outline: none;
     }
   }
 }
 
+.menu {
+  display: none;
+  list-style: none;
+  margin-bottom: 2em;
+
+  &__item {
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    background-color: transparentize($scdBGColor, .4);
+  }
+
+
+  &__link {
+    display: block;
+    padding: .8em;
+    font-weight: 400;
+    @include transition(all, .5s);
+    border-bottom: 1px solid darken($decorFontColor, 30%);
+  }
+}
 
 // Logo
 .logo {
-  display: table-cell;
-  width: 40%;
   padding-top: 1.5em;
   text-align: center;
+  margin: 0 auto;
 
   &__text {
     display: inline-block;
@@ -98,11 +103,6 @@
 // Small screen
 
 @include break(0, $small) {
-  .menu {
-    padding-top: 0.5em;
-    width: auto;
-  }
-
   .hero {
     margin-top: 1.3em;
 
@@ -121,8 +121,27 @@
 }
 
 @include break($sm-medium, $medium) {
+  .btn-block {
+    display: none;
+  }
+
   .menu {
-    padding-top: .5em;
+    display: block;
+    text-align: center;
+
+    &__left,
+    &__right
+    {
+      display: inline-block;
+    }
+
+    &__item {
+      display: inline-block;
+    }
+
+    &__link {
+      font-size: 0.8em;
+    }
   }
 
   .hero {
@@ -142,8 +161,44 @@
   }
 }
 
+@include break($lg-medium, $sm-large) {
+  .btn-block {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    text-align: center;
+
+    &__left,
+    &__right
+    {
+      display: inline-block;
+    }
+
+    &__item {
+      display: inline-block;
+    }
+  }
+}
+
 @include break($large) {
+  .header__inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .btn-block {
+    display: none;
+  }
+
   .logo {
+    width: 40%;
+    margin: 0 auto;
+    position: relative;
+    top: -1.5em;
+
     &:before {
       content: "\e915";
       font-family: 'icomoon' !important;
@@ -157,11 +212,44 @@
   }
 
   .menu {
-    display: table-cell;
+    display: block;
+    padding-top: 1.5em;
+    margin-bottom: 0;
+
+    &__left {
+      width: 30%;
+      float: left;
+      text-align: left;
+    }
+
+    &__right {
+      float: right;
+      width: 30%;
+      text-align: right;
+    }
+
+    &__item {
+      display: inline-block;
+      margin-right: 5%;
+      font-size: .85em;
+      background: none;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    &__link {
+      border-bottom: 1px solid transparent;
+      
+      &:hover {
+        border-color: $decorFontColor;
+      }
+    }
   }
 
   .hero {
-    margin-top: 10em;
+    margin-top: 8em;
 
     &__title {
       width: 80%;
